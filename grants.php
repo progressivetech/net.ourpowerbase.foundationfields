@@ -51,7 +51,7 @@ function grants_civicrm_postInstall() {
   );
 
   foreach($pairs as $field_name => $option_group_name) {
-    voterfields_assign_option_group_to_custom_field($field_name, $option_group_name); 
+    grants_assign_option_group_to_custom_field($field_name, $option_group_name); 
   }
 
   // In addition, we want to restrict the Proposal Info custom data group
