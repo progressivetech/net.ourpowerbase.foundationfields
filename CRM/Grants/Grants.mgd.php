@@ -276,50 +276,52 @@ return array(
       'is_active' => '1',
       'is_locked' => '0',
       'api.option_value.create' => array(
-        'option_group_id' => '$value.id',
-        'label' => 'Accepted',
-        'name' => 'grants_accepted',
-        'value' => '1',
-        'is_default' => '0',
-        'weight' => '1',
-        'is_optgroup' => '0',
-        'is_reserved' => '0',
-        'is_active' => '1'
+        array(
+          'option_group_id' => '$value.id',
+          'label' => 'Accepted',
+          'name' => 'grants_accepted',
+          'value' => '1',
+          'is_default' => '0',
+          'weight' => '1',
+          'is_optgroup' => '0',
+          'is_reserved' => '0',
+          'is_active' => '1'
+        ),
+        array(
+          'option_group_id' => '$value.id',
+          'label' => 'Pending',
+          'name' => 'grants_pending',
+          'value' => '2',
+          'is_default' => '0',
+          'weight' => '2',
+          'is_optgroup' => '0',
+          'is_reserved' => '0',
+          'is_active' => '1'
+        ),
+        array(
+          'option_group_id' => '$value.id',
+          'label' => 'Rejected',
+          'name' => 'grants_rejected',
+          'value' => '3',
+          'is_default' => '0',
+          'weight' => '3',
+          'is_optgroup' => '0',
+          'is_reserved' => '0',
+          'is_active' => '1'
+        ),
+        array(
+          'option_group_id' => '$value.id',
+          'label' => 'Resubmitted',
+          'name' => 'grants_resubmitted',
+          'value' => '4',
+          'is_default' => '0',
+          'weight' => '4',
+          'is_optgroup' => '0',
+          'is_reserved' => '0',
+          'is_active' => '1'
+        ),
       ),
-      array(
-        'option_group_id' => '$value.id',
-        'label' => 'Pending',
-        'name' => 'grants_pending',
-        'value' => '2',
-        'is_default' => '0',
-        'weight' => '2',
-        'is_optgroup' => '0',
-        'is_reserved' => '0',
-        'is_active' => '1'
-      ),
-      array(
-        'option_group_id' => '$value.id',
-        'label' => 'Rejected',
-        'name' => 'grants_rejected',
-        'value' => '3',
-        'is_default' => '0',
-        'weight' => '3',
-        'is_optgroup' => '0',
-        'is_reserved' => '0',
-        'is_active' => '1'
-      ),
-      array(
-        'option_group_id' => '$value.id',
-        'label' => 'Resubmitted',
-        'name' => 'grants_resubmitted',
-        'value' => '4',
-        'is_default' => '0',
-        'weight' => '4',
-        'is_optgroup' => '0',
-        'is_reserved' => '0',
-        'is_active' => '1'
-      ),
-    )
+    ),
   ),
   7 => array(
     'entity' => 'OptionGroup',
@@ -333,49 +335,51 @@ return array(
       'is_active' => '1',
       'is_locked' => '0',
       'api.option_value.create' => array(
-        'option_group_id' => '$value.id',
-        'label' => 'Immigrant Rights',
-        'name' => 'grants_immigrant_rights',
-        'value' => '1',
-        'is_default' => '0',
-        'weight' => '1',
-        'is_optgroup' => '0',
-        'is_reserved' => '0',
-        'is_active' => '1'
+        array(
+          'option_group_id' => '$value.id',
+          'label' => 'Immigrant Rights',
+          'name' => 'grants_immigrant_rights',
+          'value' => '1',
+          'is_default' => '0',
+          'weight' => '1',
+          'is_optgroup' => '0',
+          'is_reserved' => '0',
+          'is_active' => '1'
+        ),
+        array(
+          'option_group_id' => '$value.id',
+          'label' => 'Economic Justice',
+          'name' => 'grants_economic_justice',
+          'value' => '2',
+          'is_default' => '0',
+          'weight' => '2',
+          'is_optgroup' => '0',
+          'is_reserved' => '0',
+          'is_active' => '1'
+        ),
+        array(
+          'option_group_id' => '$value.id',
+          'label' => 'Workers Rights',
+          'name' => 'grants_workers_rights',
+          'value' => '3',
+          'is_default' => '0',
+          'weight' => '3',
+          'is_optgroup' => '0',
+          'is_reserved' => '0',
+          'is_active' => '1'
+        ),
+        array(
+          'option_group_id' => '$value.id',
+          'label' => 'Environmental Justice',
+          'name' => 'grants_environmental_justice',
+          'value' => '4',
+          'is_default' => '0',
+          'weight' => '4',
+          'is_optgroup' => '0',
+          'is_reserved' => '0',
+          'is_active' => '1'
+        ),
       ),
-      array(
-        'option_group_id' => '$value.id',
-        'label' => 'Economic Justice',
-        'name' => 'grants_economic_justice',
-        'value' => '2',
-        'is_default' => '0',
-        'weight' => '2',
-        'is_optgroup' => '0',
-        'is_reserved' => '0',
-        'is_active' => '1'
-      ),
-      array(
-        'option_group_id' => '$value.id',
-        'label' => 'Workers Rights',
-        'name' => 'grants_workers_rights',
-        'value' => '3',
-        'is_default' => '0',
-        'weight' => '3',
-        'is_optgroup' => '0',
-        'is_reserved' => '0',
-        'is_active' => '1'
-      ),
-      array(
-        'option_group_id' => '$value.id',
-        'label' => 'Environmental Justice',
-        'name' => 'grants_environmental_justice',
-        'value' => '4',
-        'is_default' => '0',
-        'weight' => '4',
-        'is_optgroup' => '0',
-        'is_reserved' => '0',
-        'is_active' => '1'
-      ),
-    )
-  )
+    ),
+  ),
 );
