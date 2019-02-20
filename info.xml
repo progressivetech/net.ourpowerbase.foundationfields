@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
-<extension key="net.ourpowerbase.grants" type="module">
-  <file>grants</file>
-  <name>Foundation and Grant Tracking</name>
-  <description>Provides custom fields and contact type to help track foundation and grants engagements.</description>
+<extension key="net.ourpowerbase.foundationfields" type="module">
+  <file>foundationfields</file>
+  <name>Foundation Fields</name>
+  <description>Provides custom fields and contact type to help track foundation and grants.</description>
   <license>AGPL-3.0</license>
   <maintainer>
     <author>Jamie McClelland</author>
     <email>jamie@progressivetech.org</email>
   </maintainer>
   <urls>
-    <url desc="Main Extension Page">https://github.com/progressivetech/net.ourpowerbase.grants</url>
+    <url desc="Main Extension Page">https://github.com/progressivetech/net.ourpowerbase.foundationfields</url>
     <url desc="Licensing">http://www.gnu.org/licenses/agpl-3.0.html</url>
   </urls>
   <releaseDate>2019-02-18</releaseDate>
@@ -20,6 +20,6 @@
   </compatibility>
   <comments>When uninstalled, this extension will delete any data you have entered into the custom fields that are created (along with the custom fields themselves).</comments>
   <civix>
-    <namespace>CRM/Grants</namespace>
+    <namespace>CRM/Foundationfields</namespace>
   </civix>
 </extension>

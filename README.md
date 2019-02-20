@@ -1,8 +1,8 @@
-# Foundation and Grant Tracking 
+# Foundation Fields 
 
 ![Screenshot](/images/screenshot.png)
 
-Foundation and Grant Tracking is a simple extension that creates:
+Foundation Fields is a simple extension that creates:
 
 * three new activity types: proposal, letter of inquiry and report, along with
   custom data fields for the proposal activity that helps track information

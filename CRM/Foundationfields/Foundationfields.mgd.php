@@ -4,11 +4,11 @@
 return array(
   0 => array(		
     'entity' => 'ContactType',
-    'name' => 'grants_foundation',
+    'name' => 'foundationfields_foundation',
     'update' => 'never',
     'params' => array(
       'version' => 3,
-      'name' => 'grants_foundation',
+      'name' => 'foundationfields_foundation',
       'label' => 'Foundation',
       'parent_id' => '3',
       'is_active' => '1',
@@ -16,15 +16,15 @@ return array(
   ),
   1 => array(
     'entity' => 'CustomGroup',
-    'name' => 'grants_foundation_info',
+    'name' => 'foundationfields_foundation_info',
     'update' => 'never',
     'params' => array (
       'version' => 3,
       'is_active' => 1,
-      'name' => 'grants_foundation_info',
+      'name' => 'foundationfields_foundation_info',
       'title' => 'Foundation Info',
       'extends' => 'Organization',
-      'extends_entity_column_value' => 'grants_foundation',
+      'extends_entity_column_value' => 'foundationfields_foundation',
       'style' => 'inline',
       'collapse_display' => '0',
       'is_active' => '1',
@@ -36,7 +36,7 @@ return array(
          array(
            'custom_group_id' => '$value.id',
            'label' => 'Average Amount',
-           'name' => 'grants_average_amount',
+           'name' => 'foundationfields_average_amount',
            'data_type' => 'Money',
            'html_type' => 'Text',
            'is_required' => '0',
@@ -53,7 +53,7 @@ return array(
          array(
            'custom_group_id' => '$value.id',
            'label' => 'Funding Areas',
-           'name' => 'grants_funding_area',
+           'name' => 'foundationfields_funding_area',
            'data_type' => 'String',
            'html_type' => 'CheckBox',
            'is_required' => '0',
@@ -71,7 +71,7 @@ return array(
         array(
           'custom_group_id' => '$value.id',
           'label' => 'Requirements Notes',
-          'name' => 'grants_requirement_notes',
+          'name' => 'foundationfields_requirement_notes',
           'data_type' => 'Memo',
           'html_type' => 'RichTextEditor',
           'is_required' => '0',
@@ -90,13 +90,13 @@ return array(
   ),
   2 => array(
     'entity' => 'OptionValue',
-    'name' => 'grants_letter_of_inquiry',
+    'name' => 'foundationfields_letter_of_inquiry',
     'update' => 'never',
     'params' => array (
       'version' => 3,
       'option_group_id' => 'activity_type',
       'label' => 'Letter of Inquiry',
-      'name' => 'grants_letter_of_inquiry',
+      'name' => 'foundationfields_letter_of_inquiry',
       'filter' => '0',
       'is_default' => '0',
       'is_optgroup' => '0',
@@ -106,13 +106,13 @@ return array(
   ),
   3 => array(
     'entity' => 'OptionValue',
-    'name' => 'grants_report',
+    'name' => 'foundationfields_report',
     'update' => 'never',
     'params' => array (
       'version' => 3,
       'option_group_id' => 'activity_type',
       'label' => 'Report',
-      'name' => 'grants_report',
+      'name' => 'foundationfields_report',
       'filter' => '0',
       'is_default' => '0',
       'is_optgroup' => '0',
@@ -122,13 +122,13 @@ return array(
   ),
   4 => array(
     'entity' => 'OptionValue',
-    'name' => 'grants_proposal',
+    'name' => 'foundationfields_proposal',
     'update' => 'never',
     'params' => array (
       'version' => 3,
       'option_group_id' => 'activity_type',
       'label' => 'Proposal',
-      'name' => 'grants_proposal',
+      'name' => 'foundationfields_proposal',
       'filter' => '0',
       'is_default' => '0',
       'is_optgroup' => '0',
@@ -138,12 +138,12 @@ return array(
   ),
   5 => array(
     'entity' => 'CustomGroup',
-    'name' => 'grants_proposal_info',
+    'name' => 'foundationfields_proposal_info',
     'update' => 'never',
     'params' => array (
       'version' => 3,
       'is_active' => 1,
-      'name' => 'grants_proposal_info',
+      'name' => 'foundationfields_proposal_info',
       'title' => 'Proposal Info',
       'extends' => 'Activity',
       'extends_entity_column_value' => array(),
@@ -158,7 +158,7 @@ return array(
         array(
           'custom_group_id' => '$value.id',
           'label' => 'Ask Amount',
-          'name' => 'grants_ask_amount',
+          'name' => 'foundationfields_ask_amount',
           'data_type' => 'Money',
           'html_type' => 'Text',
           'is_required' => '0',
@@ -175,7 +175,7 @@ return array(
         array(
           'custom_group_id' => '$value.id',
           'label' => 'Amount to be Received',
-          'name' => 'grants_amount_to_be_received',
+          'name' => 'foundationfields_amount_to_be_received',
           'data_type' => 'Money',
           'html_type' => 'Text',
           'is_required' => '0',
@@ -192,7 +192,7 @@ return array(
         array(
           'custom_group_id' => '$value.id',
           'label' => 'Date to be Received',
-          'name' => 'grants_date_to_be_received',
+          'name' => 'foundationfields_date_to_be_received',
           'data_type' => 'Date',
           'html_type' => 'Select Date',
           'is_required' => '0',
@@ -212,7 +212,7 @@ return array(
         array(
           'custom_group_id' => '$value.id',
           'label' => 'Multiyear Grant',
-          'name' => 'grants_multiyear_grant',
+          'name' => 'foundationfields_multiyear_grant',
           'data_type' => 'Boolean',
           'html_type' => 'Radio',
           'is_required' => '0',
@@ -229,7 +229,7 @@ return array(
         array(
           'custom_group_id' => '$value.id',
           'label' => 'Years',
-          'name' => 'grants_years',
+          'name' => 'foundationfields_years',
           'data_type' => 'Float',
           'html_type' => 'Text',
           'is_required' => '0',
@@ -247,7 +247,7 @@ return array(
         array(
           'custom_group_id' => '$value.id',
           'label' => 'Proposal Status',
-          'name' => 'grants_proposal_status',
+          'name' => 'foundationfields_proposal_status',
           'data_type' => 'String',
           'html_type' => 'Select',
           'is_required' => '0',
@@ -266,11 +266,11 @@ return array(
   ),
   6 => array(
     'entity' => 'OptionGroup',
-    'name' => 'grants_proposal_status_values',
+    'name' => 'foundationfields_proposal_status_values',
     'update' => 'never',
     'params' => array (
       'version' => 3,
-      'name' => 'grants_proposal_status_values',
+      'name' => 'foundationfields_proposal_status_values',
       'title' => 'Proposal Status Values',
       'is_reserved' => '1',
       'is_active' => '1',
@@ -279,7 +279,7 @@ return array(
         array(
           'option_group_id' => '$value.id',
           'label' => 'Accepted',
-          'name' => 'grants_accepted',
+          'name' => 'foundationfields_accepted',
           'value' => '1',
           'is_default' => '0',
           'weight' => '1',
@@ -290,7 +290,7 @@ return array(
         array(
           'option_group_id' => '$value.id',
           'label' => 'Pending',
-          'name' => 'grants_pending',
+          'name' => 'foundationfields_pending',
           'value' => '2',
           'is_default' => '0',
           'weight' => '2',
@@ -301,7 +301,7 @@ return array(
         array(
           'option_group_id' => '$value.id',
           'label' => 'Rejected',
-          'name' => 'grants_rejected',
+          'name' => 'foundationfields_rejected',
           'value' => '3',
           'is_default' => '0',
           'weight' => '3',
@@ -312,7 +312,7 @@ return array(
         array(
           'option_group_id' => '$value.id',
           'label' => 'Resubmitted',
-          'name' => 'grants_resubmitted',
+          'name' => 'foundationfields_resubmitted',
           'value' => '4',
           'is_default' => '0',
           'weight' => '4',
@@ -325,11 +325,11 @@ return array(
   ),
   7 => array(
     'entity' => 'OptionGroup',
-    'name' => 'grants_funding_area_values',
+    'name' => 'foundationfields_funding_area_values',
     'update' => 'never',
     'params' => array (
       'version' => 3,
-      'name' => 'grants_funding_area_values',
+      'name' => 'foundationfields_funding_area_values',
       'title' => 'Funding areas',
       'is_reserved' => '1',
       'is_active' => '1',
@@ -338,7 +338,7 @@ return array(
         array(
           'option_group_id' => '$value.id',
           'label' => 'Immigrant Rights',
-          'name' => 'grants_immigrant_rights',
+          'name' => 'foundationfields_immigrant_rights',
           'value' => '1',
           'is_default' => '0',
           'weight' => '1',
@@ -349,7 +349,7 @@ return array(
         array(
           'option_group_id' => '$value.id',
           'label' => 'Economic Justice',
-          'name' => 'grants_economic_justice',
+          'name' => 'foundationfields_economic_justice',
           'value' => '2',
           'is_default' => '0',
           'weight' => '2',
@@ -360,7 +360,7 @@ return array(
         array(
           'option_group_id' => '$value.id',
           'label' => 'Workers Rights',
-          'name' => 'grants_workers_rights',
+          'name' => 'foundationfields_workers_rights',
           'value' => '3',
           'is_default' => '0',
           'weight' => '3',
@@ -371,7 +371,7 @@ return array(
         array(
           'option_group_id' => '$value.id',
           'label' => 'Environmental Justice',
-          'name' => 'grants_environmental_justice',
+          'name' => 'foundationfields_environmental_justice',
           'value' => '4',
           'is_default' => '0',
           'weight' => '4',

@@ -1,4 +1,4 @@
-Package: net.ourpowerbase.grants
+Package: net.ourpowerbase.foundationfields
 Copyright (C) 2019, FIXME <FIXME>
 Licensed under the GNU Affero Public License 3.0 (below).
 
@@ -432,7 +432,7 @@ material under section 10.
 run a copy of the Program.  Ancillary propagation of a covered work
 occurring solely as a consequence of using peer-to-peer transmission
 to receive a copy likewise does not require acceptance.  However,
-nothing other than this License grants you permission to propagate or
+nothing other than this License foundationfields you permission to propagate or
 modify any covered work.  These actions infringe copyright if you do
 not accept this License.  Therefore, by modifying or propagating a
 covered work, you indicate your acceptance of this License to do so.
@@ -478,7 +478,7 @@ purposes of this definition, "control" includes the right to grant
 patent sublicenses in a manner consistent with the requirements of
 this License.
 
-  Each contributor grants you a non-exclusive, worldwide, royalty-free
+  Each contributor foundationfields you a non-exclusive, worldwide, royalty-free
 patent license under the contributor's essential patent claims, to
 make, use, sell, offer for sale, import and otherwise run, modify and
 propagate the contents of its contributor version.
@@ -519,7 +519,7 @@ specifically granted under this License.  You may not convey a covered
 work if you are a party to an arrangement with a third party that is
 in the business of distributing software, under which you make payment
 to the third party based on the extent of your activity of conveying
-the work, and under which the third party grants, to any of the
+the work, and under which the third party foundationfields, to any of the
 parties who would receive the covered work from you, a discriminatory
 patent license (a) in connection with copies of the covered work
 conveyed by you (or copies made from those copies), or (b) primarily

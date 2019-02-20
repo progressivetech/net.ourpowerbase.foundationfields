@@ -1,15 +1,15 @@
 <?php
 
-require_once 'grants.civix.php';
-use CRM_Grants_ExtensionUtil as E;
+require_once 'foundationfields.civix.php';
+use CRM_Foundationfields_ExtensionUtil as E;
 
 /**
  * Implements hook_civicrm_config().
  *
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_config
  */
-function grants_civicrm_config(&$config) {
-  _grants_civix_civicrm_config($config);
+function foundationfields_civicrm_config(&$config) {
+  _foundationfields_civix_civicrm_config($config);
 }
 
 /**
@@ -17,8 +17,8 @@ function grants_civicrm_config(&$config) {
  *
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_xmlMenu
  */
-function grants_civicrm_xmlMenu(&$files) {
-  _grants_civix_civicrm_xmlMenu($files);
+function foundationfields_civicrm_xmlMenu(&$files) {
+  _foundationfields_civix_civicrm_xmlMenu($files);
 }
 
 /**
@@ -26,8 +26,8 @@ function grants_civicrm_xmlMenu(&$files) {
  *
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_install
  */
-function grants_civicrm_install() {
-  _grants_civix_civicrm_install();
+function foundationfields_civicrm_install() {
+  _foundationfields_civix_civicrm_install();
 }
 
 /**
@@ -35,8 +35,8 @@ function grants_civicrm_install() {
  *
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_postInstall
  */
-function grants_civicrm_postInstall() {
-  _grants_civix_civicrm_postInstall();
+function foundationfields_civicrm_postInstall() {
+  _foundationfields_civix_civicrm_postInstall();
 
   // Via managed entities, we create a group of custom fields. Some of the fields
   // are radio fields that have options, so we ask managed entities to create
@@ -46,29 +46,29 @@ function grants_civicrm_postInstall() {
   // appropriate option group so we do that manually here.
 
   $pairs = array(
-    'grants_proposal_status' => 'grants_proposal_status_values',
-    'grants_funding_area' => 'grants_funding_area_values',
+    'foundationfields_proposal_status' => 'foundationfields_proposal_status_values',
+    'foundationfields_funding_area' => 'foundationfields_funding_area_values',
   );
 
   foreach($pairs as $field_name => $option_group_name) {
-    grants_assign_option_group_to_custom_field($field_name, $option_group_name); 
+    foundationfields_assign_option_group_to_custom_field($field_name, $option_group_name); 
   }
 
   // In addition, we want to restrict the Proposal Info custom data group
-  // to activities of the type: grants_report, grants_letter_of_inquiry and
-  // grants_proposal.
+  // to activities of the type: foundationfields_report, foundationfields_letter_of_inquiry and
+  // foundationfields_proposal.
   $activity_type_ids = array();
-  $activity_types = array('grants_report', 'grants_letter_of_inquiry', 'grants_proposal');
+  $activity_types = array('foundationfields_report', 'foundationfields_letter_of_inquiry', 'foundationfields_proposal');
   foreach($activity_types as $name) {
     $params = array('name' => $name, 'option_group_id' => 'activity_type');
     $result = civicrm_api3('OptionValue', 'getsingle', $params);
     $activity_type_ids[] = $result['value'];
   }
 
-  $grants_proposal_params = civicrm_api3('CustomGroup', 'getsingle', array('name' => 'grants_proposal_info'));
-  $grants_proposal_params['extends_entity_column_value'] = $activity_type_ids;
-  dpm($grants_proposal_params);
-  civicrm_api3('CustomGroup', 'create', $grants_proposal_params);
+  $foundationfields_proposal_params = civicrm_api3('CustomGroup', 'getsingle', array('name' => 'foundationfields_proposal_info'));
+  $foundationfields_proposal_params['extends_entity_column_value'] = $activity_type_ids;
+  dpm($foundationfields_proposal_params);
+  civicrm_api3('CustomGroup', 'create', $foundationfields_proposal_params);
 }
 
 /**
@@ -80,7 +80,7 @@ function grants_civicrm_postInstall() {
  *   string name of option group
  *
  **/
-function grants_assign_option_group_to_custom_field($field_name, $option_group_name) {
+function foundationfields_assign_option_group_to_custom_field($field_name, $option_group_name) {
   $params = array('name' => $option_group_name);
   $option_group = civicrm_api3('option_group', 'getsingle', $params);
 
@@ -97,8 +97,8 @@ function grants_assign_option_group_to_custom_field($field_name, $option_group_n
  *
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_uninstall
  */
-function grants_civicrm_uninstall() {
-  _grants_civix_civicrm_uninstall();
+function foundationfields_civicrm_uninstall() {
+  _foundationfields_civix_civicrm_uninstall();
 }
 
 /**
@@ -106,8 +106,8 @@ function grants_civicrm_uninstall() {
  *
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_enable
  */
-function grants_civicrm_enable() {
-  _grants_civix_civicrm_enable();
+function foundationfields_civicrm_enable() {
+  _foundationfields_civix_civicrm_enable();
 }
 
 /**
@@ -115,8 +115,8 @@ function grants_civicrm_enable() {
  *
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_disable
  */
-function grants_civicrm_disable() {
-  _grants_civix_civicrm_disable();
+function foundationfields_civicrm_disable() {
+  _foundationfields_civix_civicrm_disable();
 }
 
 /**
@@ -124,8 +124,8 @@ function grants_civicrm_disable() {
  *
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_upgrade
  */
-function grants_civicrm_upgrade($op, CRM_Queue_Queue $queue = NULL) {
-  return _grants_civix_civicrm_upgrade($op, $queue);
+function foundationfields_civicrm_upgrade($op, CRM_Queue_Queue $queue = NULL) {
+  return _foundationfields_civix_civicrm_upgrade($op, $queue);
 }
 
 /**
@@ -136,8 +136,8 @@ function grants_civicrm_upgrade($op, CRM_Queue_Queue $queue = NULL) {
  *
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_managed
  */
-function grants_civicrm_managed(&$entities) {
-  _grants_civix_civicrm_managed($entities);
+function foundationfields_civicrm_managed(&$entities) {
+  _foundationfields_civix_civicrm_managed($entities);
 }
 
 /**
@@ -149,8 +149,8 @@ function grants_civicrm_managed(&$entities) {
  *
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_caseTypes
  */
-function grants_civicrm_caseTypes(&$caseTypes) {
-  _grants_civix_civicrm_caseTypes($caseTypes);
+function foundationfields_civicrm_caseTypes(&$caseTypes) {
+  _foundationfields_civix_civicrm_caseTypes($caseTypes);
 }
 
 /**
@@ -163,8 +163,8 @@ function grants_civicrm_caseTypes(&$caseTypes) {
  *
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_angularModules
  */
-function grants_civicrm_angularModules(&$angularModules) {
-  _grants_civix_civicrm_angularModules($angularModules);
+function foundationfields_civicrm_angularModules(&$angularModules) {
+  _foundationfields_civix_civicrm_angularModules($angularModules);
 }
 
 /**
@@ -172,8 +172,8 @@ function grants_civicrm_angularModules(&$angularModules) {
  *
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_alterSettingsFolders
  */
-function grants_civicrm_alterSettingsFolders(&$metaDataFolders = NULL) {
-  _grants_civix_civicrm_alterSettingsFolders($metaDataFolders);
+function foundationfields_civicrm_alterSettingsFolders(&$metaDataFolders = NULL) {
+  _foundationfields_civix_civicrm_alterSettingsFolders($metaDataFolders);
 }
 
 /**
@@ -183,8 +183,8 @@ function grants_civicrm_alterSettingsFolders(&$metaDataFolders = NULL) {
  *
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_entityTypes
  */
-function grants_civicrm_entityTypes(&$entityTypes) {
-  _grants_civix_civicrm_entityTypes($entityTypes);
+function foundationfields_civicrm_entityTypes(&$entityTypes) {
+  _foundationfields_civix_civicrm_entityTypes($entityTypes);
 }
 
 // --- Functions below this ship commented out. Uncomment as required. ---
@@ -194,7 +194,7 @@ function grants_civicrm_entityTypes(&$entityTypes) {
  *
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_preProcess
  *
-function grants_civicrm_preProcess($formName, &$form) {
+function foundationfields_civicrm_preProcess($formName, &$form) {
 
 } // */
 
@@ -203,8 +203,8 @@ function grants_civicrm_preProcess($formName, &$form) {
  *
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_navigationMenu
  *
-function grants_civicrm_navigationMenu(&$menu) {
-  _grants_civix_insert_navigation_menu($menu, 'Mailings', array(
+function foundationfields_civicrm_navigationMenu(&$menu) {
+  _foundationfields_civix_insert_navigation_menu($menu, 'Mailings', array(
     'label' => E::ts('New subliminal message'),
     'name' => 'mailing_subliminal_message',
     'url' => 'civicrm/mailing/subliminal',
@@ -212,5 +212,5 @@ function grants_civicrm_navigationMenu(&$menu) {
     'operator' => 'OR',
     'separator' => 0,
   ));
-  _grants_civix_navigationMenu($menu);
+  _foundationfields_civix_navigationMenu($menu);
 } // */
