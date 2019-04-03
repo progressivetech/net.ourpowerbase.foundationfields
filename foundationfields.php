@@ -46,7 +46,6 @@ function foundationfields_civicrm_postInstall() {
   // appropriate option group so we do that manually here.
 
   $pairs = array(
-    'foundationfields_proposal_status' => 'foundationfields_proposal_status_values',
     'foundationfields_funding_area' => 'foundationfields_funding_area_values',
   );
 
@@ -58,7 +57,7 @@ function foundationfields_civicrm_postInstall() {
   // to activities of the type: foundationfields_report, foundationfields_letter_of_inquiry and
   // foundationfields_proposal.
   $activity_type_ids = array();
-  $activity_types = array('foundationfields_report', 'foundationfields_letter_of_inquiry', 'foundationfields_proposal');
+  $activity_types = array('foundationfields_proposal');
   foreach($activity_types as $name) {
     $params = array('name' => $name, 'option_group_id' => 'activity_type');
     $result = civicrm_api3('OptionValue', 'getsingle', $params);
@@ -67,7 +66,6 @@ function foundationfields_civicrm_postInstall() {
 
   $foundationfields_proposal_params = civicrm_api3('CustomGroup', 'getsingle', array('name' => 'foundationfields_proposal_info'));
   $foundationfields_proposal_params['extends_entity_column_value'] = $activity_type_ids;
-  dpm($foundationfields_proposal_params);
   civicrm_api3('CustomGroup', 'create', $foundationfields_proposal_params);
 }
 
