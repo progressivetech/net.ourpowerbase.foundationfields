@@ -54,10 +54,10 @@ function foundationfields_civicrm_postInstall() {
   }
 
   // In addition, we want to restrict the Proposal Info custom data group
-  // to activities of the type: foundationfields_report, foundationfields_letter_of_inquiry and
+  // to activities of the type: foundationfields_letter_of_inquiry and
   // foundationfields_proposal.
   $activity_type_ids = array();
-  $activity_types = array('foundationfields_proposal');
+  $activity_types = array('foundationfields_proposal', 'foundationfields_letter_of_inquiry');
   foreach($activity_types as $name) {
     $params = array('name' => $name, 'option_group_id' => 'activity_type');
     $result = civicrm_api3('OptionValue', 'getsingle', $params);
